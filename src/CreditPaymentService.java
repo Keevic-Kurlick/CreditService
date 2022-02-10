@@ -2,7 +2,6 @@ public class CreditPaymentService {
     public static final double loanRate = 1 + 9.99/100;
 
     public static int calculate (int creditSum, int time) {
-        time *= 12;
         double rate = countRate(time);
         double credit = creditSum * rate;
         int monthlyPayment = (int)credit/time;
@@ -10,7 +9,6 @@ public class CreditPaymentService {
     }
 
     private static double countRate(int time) {
-        time *= 12;
         double rate = 1 + 16.1432/100;
 
         if (time <= 12) {
